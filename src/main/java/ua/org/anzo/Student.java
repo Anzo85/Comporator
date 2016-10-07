@@ -1,7 +1,7 @@
 package ua.org.anzo;
 
 
-public class Student {
+public class Student implements Comparable <Student>{
 
 
     private String name;
@@ -41,6 +41,18 @@ public class Student {
         return true;
 
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public int compareTo(Student student) {
+        if(student.name.equals(this.name)) return 0 ;
+        return -1;
+    }
+
+
 
 }
 
